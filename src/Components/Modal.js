@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./Form"
 
 export default class Modal extends React.Component {
   onClose = e => {
@@ -11,14 +12,12 @@ export default class Modal extends React.Component {
     return (
       <React.Fragment>
         <div className="modal">
-          <button class="toggle-button" onClick={this.onClose}>
-            Save
-          </button>
-          <button class="toggle-button" onClick={this.onClose}>
-            Cancel
-          </button>
+          <span onClick={this.onClose}>
+            &times;
+          </span>
+          <Form />
         </div>
-        <div className="modal-overlay"></div>
+        <div className="modal-overlay" onClick={this.onClose}></div>
       </React.Fragment>
     );
   }

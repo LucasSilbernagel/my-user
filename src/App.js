@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./Component/Modal";
+import Modal from "./Components/Modal";
 import "./App.scss";
 class App extends React.Component {
   state = {

@@ -1,6 +1,9 @@
 import React from "react";
 import Modal from "./Components/Modal";
 import "./App.scss";
+
+import Persona from "./Components/Persona"
+import firebase from "firebase"
 class App extends React.Component {
   state = {
     show: false
@@ -10,6 +13,64 @@ class App extends React.Component {
       show: !this.state.show
     });
   };
+
+  constructor() {
+    super()
+    this.state = {
+      personas: [],
+      userInput: ""
+    }
+  }
+
+
+
+
+  // grab the list of personas from database
+  componentDidMount() {
+    // set up listener to firebase database
+    const dbRef = firebase.database().ref();
+    // inside .ref() could put specific database key
+
+    dbRef.on('value', (result) => {
+      const data = result.val();
+      // Turn data from an object into an array
+      const personasArray = []
+      for (let key in data) {
+        personasArray.push({persona: data[key], personaId: key})
+      }
+      this.setState({
+        personas: personasArray
+      })
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    // add to this.state.books
+    // make a copy of this.state.books using spread
+    // push the userInput into the newArray
+    // Set the state of this.state.books to be equal to the newArray
+    // push input value to firebase
+    const dbRef = firebase.database().ref()
+      dbRef.push(this.state.userInput)
+      this.setState({
+        userInput: ""
+      })
+  }
+
+  handleUserInput = (event) => {
+    // Take event.target.value (what the user is typing)
+    // Put it into this.state.userInput
+    this.setState({
+      userInput: event.target.value
+    })
+  }
+
+
+
+
+
+
   render() {
     return (
       <React.Fragment>
@@ -30,9 +91,26 @@ class App extends React.Component {
             >
               Create User Persona
             </button>
+
+
+            <form action="#" onSubmit={this.handleSubmit}>
+              <input type="text" id="name" value={this.state.userInput} onChange={this.handleUserInput}/>
+              <button type="submit">Save</button>
+            </form>
+
+
             <ul>
               {/* Saved user personas go here */}
+              {this.state.personas.map((persona) => {
+              return (
+                <Persona key={persona.personaId} personaId={persona.personaId} personaTitle={persona.persona} />
+              )
+              })}
             </ul>
+
+
+
+
           </div>
         </main>
         <footer>

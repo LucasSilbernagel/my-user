@@ -23,7 +23,7 @@ class App extends React.Component {
           <div className="wrapper">
             <p>User personas are semi-fictional characters that represent your customers or product users, ideally based on real research and data. Create a user persona for one or more of your users, and look at other examples that have been created below! This will help you to think about the unique needs of your users and build or improve products to meet those needs.</p>
             <button
-              class="toggle-button"
+              className="toggle-button"
               onClick={e => {
                 this.showModal(e);
               }}

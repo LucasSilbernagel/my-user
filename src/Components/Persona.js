@@ -12,7 +12,7 @@ function Persona(props) {
   // Add new persona to the list on the page
   return (
     // <li onClick={deleteItem}>{props.user}</li>
-    <ul onClick={deleteItem}>
+    <ul className="created-persona" onClick={deleteItem}>
       <li>Name: {props.user.name}</li>
       <li>Age: {props.user.age}</li>
     </ul>

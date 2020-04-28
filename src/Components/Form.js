@@ -4,12 +4,7 @@ import firebase from "firebase"
 export default class Form extends React.Component {
   constructor() {
     super()
-    this.state = {
-      personas: [],
-      userInput: "",
-      name: "",
-      age: ""
-    }
+    this.state = {}
   }
 
   // On form submit
@@ -28,8 +23,8 @@ export default class Form extends React.Component {
   }
 
   handleUserInput = (event) => {
-    // Take event.target.value (what the user is typing)
-    // Put it into this.state.userInput
+    // Take event.target.value (what the user inputs)
+    // Put it into this.state
     const value = event.target.value;
     this.setState({
       ...this.state,

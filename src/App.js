@@ -44,27 +44,7 @@ class App extends React.Component {
     })
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault()
-    // add to this.state.books
-    // make a copy of this.state.books using spread
-    // push the userInput into the newArray
-    // Set the state of this.state.books to be equal to the newArray
-    // push input value to firebase
-    const dbRef = firebase.database().ref()
-      dbRef.push(this.state.userInput)
-      this.setState({
-        userInput: ""
-      })
-  }
 
-  handleUserInput = (event) => {
-    // Take event.target.value (what the user is typing)
-    // Put it into this.state.userInput
-    this.setState({
-      userInput: event.target.value
-    })
-  }
 
 
 
@@ -74,7 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Modal onClose={this.showModal} show={this.state.show} />
+        < Modal onClose={this.showModal} show={this.state.show} />
         <header>
           <div className="wrapper">
             <h1>MyUser</h1>
@@ -93,10 +73,10 @@ class App extends React.Component {
             </button>
 
 
-            <form action="#" onSubmit={this.handleSubmit}>
+            {/* <form action="#" onSubmit={this.handleSubmit}>
               <input type="text" id="name" value={this.state.userInput} onChange={this.handleUserInput}/>
               <button type="submit">Save</button>
-            </form>
+            </form> */}
 
 
             <ul>

@@ -15,6 +15,13 @@ function Persona(props) {
     <ul className="created-persona" onClick={deleteItem}>
       <li>Name: {props.user.name}</li>
       <li>Age: {props.user.age}</li>
+
+      <li>Region: {props.user.region}</li>
+      <li>Occupation: {props.user.occupation}</li>
+      <li>Education: {props.user.education}</li>
+      <li>Comfort level with modern technology (internet, computers, mobile devices, etc.): {props.user.tech}</li>
+      <li>Wants: {props.user.wants}</li>
+      <li>Problems: {props.user.problems}</li>
     </ul>
   )
 }

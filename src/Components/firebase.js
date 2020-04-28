@@ -1,9 +1,7 @@
-// firebase.js
 import firebase from 'firebase/app'
 import 'firebase/database'
 
 // Initialize Firebase
-// USE YOUR CONFIG OBJECT
 const config = {
   apiKey: "AIzaSyB2ad53R7n146eY70wpxPvFDgOYbM7E8oA",
   authDomain: "my-user-1a244.firebaseapp.com",

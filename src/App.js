@@ -8,6 +8,8 @@ class App extends React.Component {
   state = {
     show: false
   };
+
+  // Show or hide modal on click
   showModal = e => {
     this.setState({
       show: !this.state.show
@@ -22,15 +24,13 @@ class App extends React.Component {
     }
   }
 
-
-
-
   // grab the list of personas from database
   componentDidMount() {
     // set up listener to firebase database
     const dbRef = firebase.database().ref();
     // inside .ref() could put specific database key
 
+    // Put new data into the data variable
     dbRef.on('value', (result) => {
       const data = result.val();
       // Turn data from an object into an array
@@ -44,13 +44,6 @@ class App extends React.Component {
     })
   }
 
-
-
-
-
-
-
-
   render() {
     return (
       <React.Fragment>
@@ -62,9 +55,10 @@ class App extends React.Component {
         </header>
         <main>
           <div className="wrapper">
-            <p>User personas are semi-fictional characters that represent your customers or product users, ideally based on real research and data. Create a user persona for one or more of your users, and look at other examples that have been created below! This will help you to think about the unique needs of your users and build or improve products to meet those needs.</p>
+            <p>User personas are semi-fictional characters that represent your customers or product users, ideally based on real research and data. Create a user persona for one or more of your users, and look at others that have been created below! This will help you to think about the unique needs of your users and build or improve products to meet those needs.</p>
+            
+            {/* Button to show modal */}
             <button
-              className="toggle-button"
               onClick={e => {
                 this.showModal(e);
               }}
@@ -72,25 +66,15 @@ class App extends React.Component {
               Create User Persona
             </button>
 
-
-            {/* <form action="#" onSubmit={this.handleSubmit}>
-              <input type="text" id="name" value={this.state.userInput} onChange={this.handleUserInput}/>
-              <button type="submit">Save</button>
-            </form> */}
-
-
             <ul>
               {/* Saved user personas go here */}
-              {this.state.personas.map((persona) => {
+              {/* Map over the personas array and add the new persona */}
+              {this.state.personas.map((savedPersona) => {
               return (
-                <Persona key={persona.personaId} personaId={persona.personaId} personaTitle={persona.persona} />
+                <Persona key={savedPersona.personaId} personaId={savedPersona.personaId} user={savedPersona.persona} />
               )
               })}
             </ul>
-
-
-
-
           </div>
         </main>
         <footer>

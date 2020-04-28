@@ -80,9 +80,9 @@ export default class Form extends React.Component {
                 <option value="Very comfortable">Very comfortable</option>
               </select>
               <label htmlFor="wants">Wants:</label>
-              <input type="text" name="wants" id="wants" placeholder="To learn how to code" value={this.state.wants} onChange={this.handleUserInput} />
+              <textarea name="wants" id="wants" placeholder="To learn how to code" value={this.state.wants} onChange={this.handleUserInput} />
               <label htmlFor="problems">Problems:</label>
-              <input type="text" name="problems" id="problems" placeholder="Has trouble finding resources on how to code" value={this.state.problems} onChange={this.handleUserInput} />
+              <textarea name="problems" id="problems" placeholder="Has trouble finding resources on how to code" value={this.state.problems} onChange={this.handleUserInput} />
               <button type="submit" name="submit">Save</button>
             </fieldset>
           </form>

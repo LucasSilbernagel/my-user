@@ -43,12 +43,12 @@ export default class Form extends React.Component {
               <input type="text" autoFocus name="name" id="name" value={this.state.userInput} onChange={this.handleUserInput} placeholder="Alex Smith" required />
               {/* <label htmlFor="age">Age</label>
               <select name="age" id="age" required>
-                <option value="toddler">0 - 8</option>
-                <option value="tween">9 - 12</option>
-                <option value="teen">13 - 19</option>
-                <option value="young adult">20 - 35</option>
-                <option value="older adult">36 - 55</option>
-                <option value="senior">56+</option>
+                <option value="0 to 8">0 to 8</option>
+                <option value="9 to 12">9 to 12</option>
+                <option value="13 to 19">13 to 19</option>
+                <option value="20 to 35">20 to 35</option>
+                <option value="36 to 55">36 to 55</option>
+                <option value="56 and older">56 and older</option>
               </select>
               <label htmlFor="region">Region</label>
               <input type="text" name="region" id="region" placeholder="Ontario" required />

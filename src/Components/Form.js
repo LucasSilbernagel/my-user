@@ -10,22 +10,17 @@ export default class Form extends React.Component {
     }
   }
 
-
-  
-
-
+  // On form submit
   handleSubmit = (event) => {
+    // Prevent page from reloading
     event.preventDefault()
-    // add to this.state.books
-    // make a copy of this.state.books using spread
-    // push the userInput into the newArray
-    // Set the state of this.state.books to be equal to the newArray
-    // push input value to firebase
+    // push user input value to firebase
     const dbRef = firebase.database().ref()
       dbRef.push(this.state.userInput)
       this.setState({
         userInput: ""
       })
+    // Reload page
     window.location.reload();
   }
 
@@ -37,17 +32,12 @@ export default class Form extends React.Component {
     })
   }
 
-
-
-
-   
-
-
   render() {
     return (
       <React.Fragment>
         <div className="form-container">
-          <form action="#" id="persona-form" onSubmit={this.handleSubmit}>
+          {/* The form that renders inside the modal */}
+          <form action="#" onSubmit={this.handleSubmit}>
             <fieldset>
               <label htmlFor="name">Name</label>
               <input type="text" autoFocus name="name" id="name" value={this.state.userInput} onChange={this.handleUserInput} placeholder="Alex Smith" required />
@@ -84,7 +74,7 @@ export default class Form extends React.Component {
               <input type="text" name="wants" id="wants" placeholder="To learn how to code" />
               <label htmlFor="problems">Problems</label>
               <input type="text" name="problems" id="problems" placeholder="Has trouble finding resources on how to code" /> */}
-              <button type="submit" form="persona-form" name="submit">Save</button>
+              <button type="submit" name="submit">Save</button>
             </fieldset>
           </form>
         </div>

@@ -22,7 +22,8 @@ export default class Form extends React.Component {
         education: this.state.education,
         tech: this.state.tech,
         wants: this.state.wants,
-        problems: this.state.problems
+        problems: this.state.problems,
+        other: this.state.other
       })
     // Reload page
     window.location.reload();
@@ -83,6 +84,8 @@ export default class Form extends React.Component {
               <textarea name="wants" id="wants" placeholder="To learn how to code" value={this.state.wants} onChange={this.handleUserInput} />
               <label htmlFor="problems">Problems:</label>
               <textarea name="problems" id="problems" placeholder="Has trouble finding resources on how to code" value={this.state.problems} onChange={this.handleUserInput} />
+              <label htmlFor="other">Other information:</label>
+              <textarea name="other" id="other" placeholder="Social networks, preferred method of communication, favourite colour, etc." value={this.state.other} onChange={this.handleUserInput} />
               <button type="submit" name="submit">Save</button>
             </fieldset>
           </form>

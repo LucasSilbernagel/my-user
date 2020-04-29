@@ -8,9 +8,7 @@ export default class Form extends React.Component {
   }
 
   // On form submit
-  handleSubmit = (event) => {
-    // Prevent page from reloading
-    event.preventDefault()
+  handleSubmit = () => {
     // push user input value to firebase
     const dbRef = firebase.database().ref()
       dbRef.push(this.state)
@@ -25,8 +23,6 @@ export default class Form extends React.Component {
         problems: this.state.problems,
         other: this.state.other
       })
-    // Reload page
-    window.location.reload();
   }
 
   handleUserInput = (event) => {
@@ -47,7 +43,7 @@ export default class Form extends React.Component {
           <form action="#" onSubmit={this.handleSubmit}>
             <fieldset>
               <label htmlFor="name">Name:</label>
-              <input type="text" autoFocus name="name" id="name" value={this.state.name} onChange={this.handleUserInput} placeholder="Taylor Smith" required />
+              <input type="text" autoFocus name="name" id="name" defaultValue={this.state.name} onChange={this.handleUserInput} placeholder="Taylor Smith" required />
               <label htmlFor="age">Age:</label>
               <select name="age" id="age" required value={this.state.age} onChange={this.handleUserInput}>
                 <option value="">Please choose an option</option>
@@ -59,9 +55,9 @@ export default class Form extends React.Component {
                 <option value="56 and older">56 and older</option>
               </select>
               <label htmlFor="region">Region:</label>
-              <input type="text" name="region" id="region" placeholder="Ontario" required value={this.state.region} onChange={this.handleUserInput} />
+              <input type="text" name="region" id="region" placeholder="Ontario" required defaultValue={this.state.region} onChange={this.handleUserInput} />
               <label htmlFor="occupation">Occupation:</label>
-              <input type="text" name="occupation" id="occupation" placeholder="Student" required value={this.state.occupation} onChange={this.handleUserInput} />
+              <input type="text" name="occupation" id="occupation" placeholder="Student" required defaultValue={this.state.occupation} onChange={this.handleUserInput} />
               <label htmlFor="education">Education:</label>
               <select name="education" id="education" required value={this.state.education} onChange={this.handleUserInput}>
                 <option value="">Please choose an option</option>

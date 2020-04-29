@@ -22,6 +22,7 @@ function Persona(props) {
         <li>Comfort level with modern technology (internet, computers, mobile devices, etc.): {props.user.tech}</li>
         <li>Wants: {props.user.wants}</li>
         <li>Problems: {props.user.problems}</li>
+        <li>Other: {props.user.other}</li>
       </ul>
     </div>
   )

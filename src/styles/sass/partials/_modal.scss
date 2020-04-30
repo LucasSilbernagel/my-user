@@ -1,6 +1,6 @@
 .modal-overlay {
   background: $modal-overlay;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 20;
@@ -8,5 +8,20 @@
 
 .modal {
   z-index: 30;
-  background: $white;
+  background: $grey;
+  animation: slidein 0.5s;
+  position: absolute;
+  .close-modal {
+    font-size: 3rem;
+    margin-left: 15px;
+  }
+  .close-modal:hover {
+    cursor: pointer;
+  }
+}
+
+/* Modal Animation */
+@keyframes slidein {
+  from {top: -800px; opacity: 0}
+  to {top: -900; opacity: 1}
 }

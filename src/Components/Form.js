@@ -54,6 +54,7 @@ export default class Form extends React.Component {
           {/* The form that renders inside the modal */}
           <form action="#" onSubmit={this.handleSubmit}>
             <fieldset>
+              <legend className="sr-only">Form to create a user persona</legend>
 
               {/* Name */}
               <label htmlFor="name">Name:</label>
@@ -114,14 +115,17 @@ export default class Form extends React.Component {
               <textarea name="other" id="other" placeholder="Social networks, preferred method of communication, favourite colour, etc." value={this.state.other} onChange={this.handleUserInput} />
 
               {/* Emoji */}
-              <label htmlFor="emoji" className="sr-only">Choose an emoji to represent your user persona!</label>
-              <input type="text" name="emoji" id="emoji" defaultValue={this.state.emoji} onChange={this.addEmoji} placeholder="Choose an emoji to represent your user persona!"/>
+              <label htmlFor="emoji" className="sr-only">Choose an emoji below to represent your user persona!</label>
+              <textarea className="emoji-input" name="emoji" id="emoji" value={this.state.emoji} onChange={this.addEmoji} placeholder="Choose an emoji below to represent your user persona!"/>
               <span>
-                <Picker title="MyUser Emoji" emoji='juggling' include='people' skinEmoji="juggling"  onSelect={this.addEmoji} />
+                <Picker style={{ width: '300px' }} title="MyUser Emoji" emoji='juggling' include='people' skinEmoji="bald_man"  onSelect={this.addEmoji} />
               </span>
 
+              <div className="center-button">
               {/* Button to submit form */}
-              <button type="submit" name="submit">Save</button>
+                <button className="save-button" type="submit" name="submit">Save User Persona</button>
+              </div>
+
             </fieldset>
           </form>
         </div>

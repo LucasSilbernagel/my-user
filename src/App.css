@@ -237,15 +237,97 @@ html {
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+header,
+main,
+footer {
+  text-align: center;
 }
 
 h1,
 button {
   font-family: "Playfair Display", serif;
+  color: #14213D;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 h1 {
   margin-top: 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
+main p,
+.created-persona {
+  text-align: left;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.4;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.landing-button {
+  background: #FCA311;
+  border: none;
+  width: 250px;
+  height: 40px;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  -webkit-box-shadow: 4px 8px;
+          box-shadow: 4px 8px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.landing-button:hover {
+  background: #f09703;
+}
+
+.landing-button:active {
+  -webkit-box-shadow: 1px 2px;
+          box-shadow: 1px 2px;
+}
+
+.persona-container {
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #E5E5E5;
+}
+
+.persona-container li {
+  padding-bottom: 10px;
+  font-size: 1rem;
+}
+
+.persona-container .emoji-li {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.persona-container .delete-item {
+  font-size: 3rem;
+}
+
+.persona-container .delete-item:hover {
+  cursor: pointer;
 }
 
 .modal-overlay {
@@ -258,7 +340,7 @@ h1 {
 
 .modal {
   z-index: 30;
-  background: white;
+  background: #FFFFFF;
 }
 
 fieldset {

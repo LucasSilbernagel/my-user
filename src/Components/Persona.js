@@ -11,19 +11,19 @@ function Persona(props) {
 
   // Add new persona to the list on the page
   return (
-    <div>
-      <span onClick={deleteItem}>&times;</span>
+    <div className="persona-container">
+      <span className="delete-item" onClick={deleteItem}>&times;</span>
       <ul className="created-persona">
-        <li>{props.user.emoji}</li>
-        <li>Name: {props.user.name}</li>
-        <li>Age: {props.user.age}</li>
-        <li>Region: {props.user.region}</li>
-        <li>Occupation: {props.user.occupation}</li>
-        <li>Education: {props.user.education}</li>
-        <li>Comfort level with modern technology (internet, computers, mobile devices, etc.): {props.user.tech}</li>
-        <li>Wants: {props.user.wants}</li>
-        <li>Challenges: {props.user.challenges}</li>
-        <li>Other: {props.user.other}</li>
+        <li className="emoji-li">{props.user.emoji}</li>
+        <li><span className="bold">Name:</span> {props.user.name}</li>
+        <li><span className="bold">Age:</span> {props.user.age}</li>
+        <li><span className="bold">Region:</span> {props.user.region}</li>
+        <li><span className="bold">Occupation:</span> {props.user.occupation}</li>
+        <li><span className="bold">Education:</span> {props.user.education}</li>
+        <li><span className="bold">Comfort level with modern technology (internet, computers, mobile devices, etc.):</span> {props.user.tech}</li>
+        <li><span className="bold">Wants:</span> {props.user.wants}</li>
+        <li><span className="bold">Challenges:</span> {props.user.challenges}</li>
+        <li><span className="bold">Other:</span> {props.user.other}</li>
       </ul>
     </div>
   )

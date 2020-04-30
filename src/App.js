@@ -64,6 +64,7 @@ class App extends React.Component {
             
             {/* Button to show modal */}
             <button
+              className="landing-button"
               onClick={e => {
                 this.showModal(e);
               }}
@@ -82,7 +83,7 @@ class App extends React.Component {
             </ul>
 
             {/* Button to print our download */}
-            <button onClick={window.print}>Print or Download</button>
+            <button className="landing-button" onClick={window.print}>Print or Download</button>
 
           </div>
         </main>

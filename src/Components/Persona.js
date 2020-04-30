@@ -14,6 +14,7 @@ function Persona(props) {
     <div>
       <span onClick={deleteItem}>&times;</span>
       <ul className="created-persona">
+        <li>{props.user.emoji}</li>
         <li>Name: {props.user.name}</li>
         <li>Age: {props.user.age}</li>
         <li>Region: {props.user.region}</li>
@@ -21,7 +22,7 @@ function Persona(props) {
         <li>Education: {props.user.education}</li>
         <li>Comfort level with modern technology (internet, computers, mobile devices, etc.): {props.user.tech}</li>
         <li>Wants: {props.user.wants}</li>
-        <li>Problems: {props.user.problems}</li>
+        <li>Challenges: {props.user.challenges}</li>
         <li>Other: {props.user.other}</li>
       </ul>
     </div>

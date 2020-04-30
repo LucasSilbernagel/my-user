@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "./Components/Modal";
 import "./App.scss";
-
 import Persona from "./Components/Persona"
 import firebase from "firebase"
 class App extends React.Component {
@@ -47,12 +46,18 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
+
+        {/* Show/hide modal */}
         < Modal onClose={this.showModal} show={this.state.show} />
+
+        {/* Header */}
         <header>
           <div className="wrapper">
             <h1>MyUser</h1>
           </div>
         </header>
+
+        {/* Main section */}
         <main>
           <div className="wrapper">
             <p>User personas are semi-fictional characters that represent your customers or product users, ideally based on real research and data. Create a user persona for one or more of your users, or look at others that have been created below! This will help you to think about the unique needs of your users and build or improve products to meet those needs.</p>
@@ -75,9 +80,14 @@ class App extends React.Component {
               )
               })}
             </ul>
+
+            {/* Button to print our download */}
             <button onClick={window.print}>Print or Download</button>
+
           </div>
         </main>
+
+        {/* Footer */}
         <footer>
           <div className="wrapper">
             <p>Built by <a href="https://lucassilbernagel.com/" target="_blank" rel="noopener noreferrer">Lucas Silbernagel</a></p>

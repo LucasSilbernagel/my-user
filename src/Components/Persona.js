@@ -3,16 +3,16 @@ import firebase from './firebase'
 
 function Persona(props) {
 
-  // Delete persona when clicked
+  // Delete persona when close button is clicked
   const deleteItem = () => {
     const itemRef = firebase.database().ref(props.personaId)
     itemRef.remove()
   }
 
-  // Add new persona to the list on the page
+  // Add each new persona to the list on the page
   return (
     <div className="persona-container">
-      <span className="delete-item" onClick={deleteItem}>&times;</span>
+      <span className="delete-item" aria-label="delete persona" onClick={deleteItem}>&times;</span>
       <ul className="created-persona">
         <li className="emoji-li">{props.user.emoji}</li>
         <li><span className="bold">Name:</span> {props.user.name}</li>

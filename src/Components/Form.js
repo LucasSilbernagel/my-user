@@ -58,7 +58,7 @@ export default class Form extends React.Component {
 
               {/* Name */}
               <label htmlFor="name">Name:</label>
-              <input type="text" autoFocus name="name" id="name" defaultValue={this.state.name} onChange={this.handleUserInput} placeholder="Taylor Smith" required />
+              <input type="text" name="name" id="name" defaultValue={this.state.name} onChange={this.handleUserInput} placeholder="Taylor Smith" required />
 
               {/* Age */}
               <label htmlFor="age">Age:</label>

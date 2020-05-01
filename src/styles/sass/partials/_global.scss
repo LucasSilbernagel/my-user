@@ -2,6 +2,12 @@ body {
   font-family: $body-text;
   background: $white;
   color: $black;
+  cursor: default;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 850px;
 }
 
 header,
@@ -22,6 +28,10 @@ ul {
 
 li {
   list-style: none;
+}
+
+a {
+  color: $black;
 }
 
 .bold {

@@ -12,7 +12,7 @@ function Persona(props) {
   // Add each new persona to the list on the page
   return (
     <div className="persona-container">
-      <span className="delete-item" aria-label="delete persona" onClick={deleteItem}>&times;</span>
+      <button className="delete-item" aria-label="delete persona" onClick={deleteItem}>&times;</button>
       <ul className="created-persona">
         <li className="emoji-li">{props.user.emoji}</li>
         <li><span className="bold">Name:</span> {props.user.name}</li>

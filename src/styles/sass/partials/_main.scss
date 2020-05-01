@@ -46,6 +46,8 @@ main p {
   .delete-item {
     font-size: 3rem;
     color: $accent;
+    border: none;
+    background: transparent;
   }
   .delete-item:hover {
     cursor: pointer;

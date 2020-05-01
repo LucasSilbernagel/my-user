@@ -14,9 +14,9 @@ export default class Modal extends React.Component {
       // Modal contents: close button, form, modal overlay for background
       <React.Fragment>
         <div className="modal">
-          <span className="close-modal" aria-label="close form" onClick={this.onClose}>
+          <button className="close-modal" aria-label="close form" onClick={this.onClose} tabIndex="-1">
             &times;
-          </span>
+          </button>
           <Form />
         </div>
         <div className="modal-overlay" onClick={this.onClose}></div>

@@ -31,7 +31,7 @@ main p {
 }
 
 .persona-container {
-  text-align: left;
+  text-align: right;
   padding-left: 10px;
   padding-right: 10px;
   background: $grey;
@@ -45,9 +45,11 @@ main p {
   }
   .delete-item {
     font-size: 3rem;
+    color: $accent;
   }
   .delete-item:hover {
     cursor: pointer;
+    color: darken($accent, 10%);
   }
 }
 

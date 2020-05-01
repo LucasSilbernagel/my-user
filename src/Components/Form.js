@@ -116,7 +116,7 @@ export default class Form extends React.Component {
 
               {/* Emoji */}
               <label htmlFor="emoji" className="sr-only">Choose an emoji below to represent your user persona!</label>
-              <textarea className="emoji-input" name="emoji" id="emoji" value={this.state.emoji} onChange={this.addEmoji} placeholder="Choose an emoji below to represent your user persona!"/>
+              <textarea readOnly className="emoji-input" name="emoji" id="emoji" value={this.state.emoji} onChange={this.addEmoji} placeholder="Choose an emoji below to represent your user persona!"/>
               <span>
                 <Picker style={{ width: '300px' }} title="MyUser Emoji" emoji='juggling' include='people' skinEmoji="bald_man"  onSelect={this.addEmoji} />
               </span>

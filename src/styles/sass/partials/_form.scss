@@ -26,6 +26,9 @@ fieldset {
   select {
     cursor: pointer;
   }
+  .emoji-input {
+    cursor: default;
+  }
 }
 
 .center-button {

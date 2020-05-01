@@ -23,11 +23,12 @@ class App extends React.Component {
     }
   }
 
-  // grab the list of personas from database
+  
   componentDidMount() {
+
+    // grab the list of personas from database
     // set up listener to firebase database
     const dbRef = firebase.database().ref();
-    // inside .ref() could put specific database key
 
     // Put new data into the data variable
     dbRef.on('value', (result) => {
@@ -37,6 +38,7 @@ class App extends React.Component {
       for (let key in data) {
         personasArray.push({persona: data[key], personaId: key})
       }
+      // Set the state of personas
       this.setState({
         personas: personasArray
       })
@@ -82,7 +84,7 @@ class App extends React.Component {
               })}
             </ul>
 
-            {/* Button to print our download */}
+            {/* Button to print or download */}
             <button className="landing-button" onClick={window.print}>Print or Download</button>
 
           </div>

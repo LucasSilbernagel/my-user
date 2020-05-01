@@ -392,19 +392,11 @@ main p {
     top: -800px;
     opacity: 0;
   }
-  to {
-    top: -900;
-    opacity: 1;
-  }
 }
 @keyframes slidein {
   from {
     top: -800px;
     opacity: 0;
-  }
-  to {
-    top: -900;
-    opacity: 1;
   }
 }
 
@@ -422,7 +414,6 @@ fieldset {
           flex-direction: column;
   border: none;
   padding: 0;
-  width: 320px;
   max-width: 320px;
   min-width: 0;
   margin: 0 auto;

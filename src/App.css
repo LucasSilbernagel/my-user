@@ -357,7 +357,7 @@ main p {
 }
 
 .modal {
-  max-height: 490px;
+  max-height: 420px;
   background: #E5E5E5;
   -webkit-animation: slidein 0.5s;
           animation: slidein 0.5s;

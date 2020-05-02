@@ -1,6 +1,5 @@
 body {
   font-family: $body-text;
-  background: $white;
   color: $black;
   cursor: default;
 }
@@ -20,6 +19,10 @@ h1,
 button {
   font-family: $header-text;
   color: $blue;
+}
+
+button {
+  border-radius: 5px;
 }
 
 ul {

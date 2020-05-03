@@ -4,26 +4,23 @@ import "./App.scss";
 import Persona from "./Components/Persona"
 import firebase from "firebase"
 class App extends React.Component {
-  state = {
-    show: false
-  };
-
-  // Show or hide modal on click
-  showModal = e => {
-    this.setState({
-      show: !this.state.show
-    });
-  };
 
   constructor() {
     super()
     this.state = {
+      open: false,
       personas: [],
       userInput: ""
     }
   }
 
-  
+  // Function to open/close modal
+  toggleModal = () => {
+    this.setState(prevState => ({
+      open: !prevState.open
+    }));
+  };
+
   componentDidMount() {
 
     // grab the list of personas from database
@@ -46,12 +43,13 @@ class App extends React.Component {
   }
 
   render() {
+
+    // Modal constants
+    const { open } = this.state;
+    const { toggleModal } = this;
+
     return (
       <React.Fragment>
-
-        {/* Show/hide modal */}
-        < Modal onClose={this.showModal} show={this.state.show} />
-
         {/* Header */}
         <header>
           <div className="wrapper">
@@ -67,12 +65,11 @@ class App extends React.Component {
             {/* Button to show modal */}
             <button
               className="landing-button"
-              onClick={e => {
-                this.showModal(e);
-              }}
+              onClick={toggleModal}
             >
               Create User Persona
             </button>
+            {open && <Modal toggleModal={toggleModal} />}
 
             <ul>
               {/* Saved user personas go here */}

@@ -22,7 +22,8 @@ main p {
   margin-bottom: 20px;
 }
 
-.landing-button:hover {
+.landing-button:hover,
+.landing-button:focus {
   background: darken($accent, 5%);
 }
 
@@ -51,7 +52,8 @@ main p {
     border: none;
     background: transparent;
   }
-  .delete-item:hover {
+  .delete-item:hover,
+  .delete-item:focus {
     cursor: pointer;
     color: darken($accent, 10%);
   }

@@ -30,7 +30,8 @@
     border: none;
     background: transparent;
   }
-  .close-modal:hover {
+  .close-modal:hover,
+  .close-modal:focus {
     cursor: pointer;
     color: darken($accent, 10%);
   }

@@ -30,7 +30,7 @@ export default function Modal(props) {
           </button>
         <Form />
       </div>
-      <div className="modal-overlay"></div>
+      <div className="modal-overlay" onClick={toggleModal}></div>
     </React.Fragment>
   );
 }

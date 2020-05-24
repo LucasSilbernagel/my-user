@@ -33,7 +33,7 @@ export default function Modal(props) {
   return (
     // FocusTrap to trap focus inside modal when open
     <FocusTrap>
-    // Modal contents: close button, form, modal overlay for background
+    {/* // Modal contents: close button, form, modal overlay for background */}
       <div className="modal-container">
         <div className="modal">
           <button ref={refContainer} className="close-modal" aria-label="close form" tabIndex="0" onClick={toggleModal}>

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "emoji-mart": "^3.0.0",
     "firebase": "^7.14.2",
+    "focus-trap-react": "^6.0.0",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.14.0",
     "react": "^16.13.1",

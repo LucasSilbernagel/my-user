@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import Form from "./Form"
+import FocusTrap from 'focus-trap-react';
 
 export default function Modal(props) {
 
@@ -30,15 +31,18 @@ export default function Modal(props) {
   }, []);
 
   return (
+    // FocusTrap to trap focus inside modal when open
+    <FocusTrap>
     // Modal contents: close button, form, modal overlay for background
-    <React.Fragment>
-      <div className="modal">
-        <button ref={refContainer} className="close-modal" aria-label="close form" tabIndex="0" onClick={toggleModal}>
-          &times;
-          </button>
-        <Form />
+      <div className="modal-container">
+        <div className="modal">
+          <button ref={refContainer} className="close-modal" aria-label="close form" tabIndex="0" onClick={toggleModal}>
+            &times;
+            </button>
+          <Form />
+        </div>
+        <div className="modal-overlay" onClick={toggleModal}></div>
       </div>
-      <div className="modal-overlay" onClick={toggleModal}></div>
-    </React.Fragment>
+    </FocusTrap>
   );
 }

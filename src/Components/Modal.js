@@ -14,7 +14,7 @@ export default function Modal(props) {
     if(event.keyCode === 27) {
       toggleModal();
     }
-  }, []);
+  }, [toggleModal]);
 
   useEffect(() => {
 
@@ -28,7 +28,7 @@ export default function Modal(props) {
       // Remove event listener for esc button press after modal closes
       document.removeEventListener("keydown", escFunction, false);
     };
-  }, []);
+  }, [escFunction]);
 
   return (
     // FocusTrap to trap focus inside modal when open

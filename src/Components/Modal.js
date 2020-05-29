@@ -21,12 +21,18 @@ export default function Modal(props) {
     // Event listener for esc button press
     document.addEventListener("keydown", escFunction, false);
 
+    // When modal opens, prevent the background from scrolling
+    document.body.style.overflow = 'hidden';
+
     // Focus on button when modal opens
     refContainer.current.focus();
 
     return () => {
       // Remove event listener for esc button press after modal closes
       document.removeEventListener("keydown", escFunction, false);
+
+      // While modal is closed, allow page to scroll
+      document.body.style.overflow = 'unset';
     };
   }, [escFunction]);
 

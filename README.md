@@ -1,6 +1,6 @@
 # MyUser
 
-A user persona generator built with React.
+A user persona generator built with React and Firebase.
 
 ## Description
 

@@ -6,6 +6,9 @@ A user persona generator built with React and Firebase.
 
 User personas are semi-fictional characters that represent your customers or product users, ideally based on real research and data. This app allows you to create a user persona for one or more of your users, or look at others that have been saved to the page with Firebase. This will help you to think about the unique needs of your users and build or improve products to meet those needs.
 
+## Live Link
+https://lucassilbernagel.github.io/my-user/
+
 ## Future Goals
 
 I included the emoji selector in order to add a visual element to each user persona, but I would ideally like to find a more elegant solution for this. One user suggested that I create a simpler toggle for a smaller list of icons, emojis, or images.

@@ -51,7 +51,7 @@ export default class Form extends React.Component {
       <div className="form-container">
 
         {/* The form that renders inside the modal */}
-        <form action="#" onSubmit={this.handleSubmit}>
+        <form action="#" onSubmit={this.handleSubmit} autocomplete="off">
           <fieldset>
             <legend className="sr-only">Form to create a user persona</legend>
 
